@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petrus Tlhomedi | Software Engineer & Digital Marketer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: 'Josefin Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #3b82f6 0%, #ef4444 100%);
+        }
+        .logo {
+            width: 50px;
+            height: 50px;
+            transition: all 0.3s ease;
+        }
+        .logo:hover {
+            transform: rotate(15deg) scale(1.1);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        .section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        .social-icon:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 min-h-screen">
+    <!-- Navigation -->
+    <nav class="gradient-bg text-white fixed w-full z-10 shadow-lg">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <div class="logo bg-white text-gradient-bg font-bold rounded-full flex items-center justify-center text-xl">
+                    PT
+                </div>
+                <span class="font-bold text-xl">Petrus Tlhomedi</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#hire" class="nav-link">Hire Me</a>
+            </div>
+            <button class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center gradient-bg text-white pt-20">
+        <div class="container mx-auto px-6 py-20 text-center section">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-bounce">Drinking Coffee <span class="text-white">☕</span> and Building Stuff</h1>
+            <p class="text-xl md:text-2xl mb-8">Software Engineer | Full Stack Digital Marketer | Problem Solver</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#hire" class="bg-white text-gradient-bg px-8 py-3 rounded-full font-bold hover:bg-opacity-90 transition-all transform hover:scale-105 shadow-lg">
+                    Let's Work Together
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6 section">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 gradient-text bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-red-500">
+                About Me
+            </h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Petrus Tlhomedi" class="rounded-lg shadow-xl transform hover:rotate-1 transition duration-300">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold mb-4">From Code to Marketing and Everything In Between</h3>
+                    <p class="mb-4 text-gray-600">
+                        ALX Software Engineering graduate (survivor?) who learned to swim by being thrown into the deep end of coding with nothing but a keyboard and a prayer. 
+                    </p>
+                    <p class="mb-4 text-gray-600">
+                        When I'm not debugging life's problems, I'm helping businesses grow online as the founder of <span class="font-bold">REGC DIGITAL</span>. Because why solve one type of problem when you can solve them all?
+                    </p>
+                    <p class="text-gray-600">
+                        My superpower? Turning caffeine into clean code and effective marketing strategies. <span class="text-xl">⚡</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 section">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 gradient-text bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-red-500">
+                What I Do
+            </h2>
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="bg-white p-8 rounded-xl shadow-lg transform transition hover:-translate-y-2">
+                    <div class="text-blue-500 text-4xl mb-4">👨‍💻</div>
+                    <h3 class="text-xl font-bold mb-3">Software Engineering</h3>
+                    <p class="text-gray-600">
+                        Building robust, scalable applications that don't just work, but work beautifully. Full stack solutions tailored to your needs.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg transform transition hover:-translate-y-2">
+                    <div class="text-red-500 text-4xl mb-4">📈</div>
+                    <h3 class="text-xl font-bold mb-3">Digital Marketing</h3>
+                    <p class="text-gray-600">
+                        Through REGC DIGITAL, I help businesses attract more clients, increase conversions, and dominate their online presence.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hire Me Section -->
+    <section id="hire" class="py-20 gradient-bg text-white">
+        <div class="container mx-auto px-6 text-center section">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8">Ready to Build Something Amazing?</h2>
+            <p class="text-xl mb-10 max-w-2xl mx-auto">
+                Whether you need a cutting-edge application or a marketing strategy that actually works, I've got you covered.
+            </p>
+            <a href="mailto:hire@petrustlhomedi.com" class="bg-white text-gradient-bg px-10 py-4 rounded-full font-bold text-lg inline-block hover:bg-opacity-90 transition-all transform hover:scale-105 shadow-lg">
+                Hire Me - Let's Chat!
+            </a>
+            <div class="flex justify-center space-x-6 mt-16">
+                <a href="#" class="social-icon text-2xl hover:text-blue-200">𝕏</a>
+                <a href="#" class="social-icon text-2xl hover:text-blue-200">FB</a>
+                <a href="#" class="social-icon text-2xl hover:text-blue-200">IG</a>
+                <a href="#" class="social-icon text-2xl hover:text-blue-200">IN</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        $(document).ready(function() {
+            // Smooth scrolling for navigation links
+            $('a[href*="#"]').on('click', function(e) {
+                e.preventDefault();
+                $('html, body').animate(
+                    {
+                        scrollTop: $($(this).attr('href')).offset().top - 80,
+                    },
+                    500,
+                    'linear'
+                );
+            });
+
+            // Section animation on scroll
+            function checkScroll() {
+                $('.section').each(function() {
+                    const sectionTop = $(this).offset().top;
+                    const scrollPos = $(window).scrollTop();
+                    const windowHeight = $(window).height();
+                    
+                    if (scrollPos > sectionTop - windowHeight + 100) {
+                        $(this).addClass('visible');
+                    }
+                });
+            }
+            
+            $(window).scroll(checkScroll);
+            checkScroll();
+
+            // Navbar background change on scroll
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 50) {
+                    $('nav').addClass('shadow-xl');
+                } else {
+                    $('nav').removeClass('shadow-xl');
+                }
+            });
+        });
+    </script>
+</body>
+  </html>
